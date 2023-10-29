@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | 3-column preview card component</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap"
+    rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            sedan: '#E28625',
+            suvs: '#006971',
+            luxury: '#004140',
+          },
+          width: {
+            'card': '57.5rem', //920px
+            'card-mobile': '20rem', //320px
+          },
+          height: {
+            'card': '31.25rem', //500px
+            'card-mobile': '82.875rem' //1326px
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    .title-heading-1 {
+      color: #F2F2F2;
+      font-family: Big Shoulders Display;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      text-transform: uppercase;
+    }
+
+    .text-normal-1 {
+      color: #FFF;
+      font-family: Lexend Deca;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 25px;
+    }
+
+    .btn{
+      width: 146px;
+      height: 48px;
+      border-radius: 25px;
+      background: #F2F2F2;
+      flex-shrink: 0;
+    }
+
+    .btn:hover{
+      background-color: transparent;
+      border: 2px solid #FFF;
+      color: #FFF;
+    }
+  </style>
+</head>
+
+<body class="flex flex-col items-center justify-center gap-8 h-full my-8 lg:my-0 lg:h-screen">
+  <hgroup class="flex flex-col m-auto w-card-mobile h-card-mobile lg:flex-row lg:w-card lg:h-card">
+    <div class="flex flex-col justify-between bg-sedan rounded-t-lg lg:rounded-tr-none lg:rounded-l-lg p-12 gap-6">
+      <img src="./images/icon-sedans.svg" alt="sedan" class="h-10 w-16">
+      <h3 class="title-heading-1">Sedans</h3>
+      <p class="text-normal-1">Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in
+        the city or on your next
+        road trip.</p>
+      <button class="btn text-sedan ">Learn More</button>
+    </div>
+
+    <div class="flex flex-col justify-between bg-suvs p-12 gap-6">
+      <img src="./images/icon-suvs.svg" alt="suvs" class="h-10 w-16">
+      <h3 class="title-heading-1">SUVs</h3>
+      <p class="text-normal-1">Take an SUV for its spacious interior, power, and versatility. Perfect for your next
+        family vacation and
+        off-road adventures.</p>
+      <button class="btn text-suvs">Learn More</button>
+    </div>
+
+    <div class="flex flex-col justify-between bg-luxury rounded-b-lg lg:rounded-bl-none lg:rounded-r-lg p-12 gap-6">
+      <img src="./images/icon-luxury.svg" alt="luxury" class="h-10 w-16">
+      <h3 class="title-heading-1">Luxury</h3>
+      <p class="text-normal-1">Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a
+        luxury rental and
+        arrive in style.</p>
+      <button class="btn text-luxury">Learn More</button>
+    </div>
+  </hgroup>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+
+</html>
